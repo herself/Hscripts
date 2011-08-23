@@ -1,3 +1,8 @@
+bash.sh
+---------------------
+Displays a random fortune from bash.org.pl 
+Only in polish, sorry!
+
 check_sap_chan.py
 ---------------------
 A nagios script which checks if all SAP channels are online
@@ -39,6 +44,10 @@ then allows you to kill it
 lock_unclutter.sh
 ---------------------
 Allows using a screen locker with the awesome ,,unclutter'' utility
+
+scrabble.sh
+---------------------
+Finds the words you can make from the given letters
 
 switch_mon.sh
 ---------------------
