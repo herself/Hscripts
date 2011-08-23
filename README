@@ -1,0 +1,47 @@
+check_sap_chan.py
+---------------------
+A nagios script which checks if all SAP channels are online
+
+check_snmp_switch_san.py
+---------------------
+A nagios script which checks the status of sensors and ports on a BROCADE FC switch
+
+Based on a really ugly (yet educational) script by Roderick Derks (roderick@r71.nl)
+
+check_tsm_drive.sh
+---------------------
+A nagios script which checks if all TSM drives are online
+The monitoring machine must have dsmadmc installed
+
+check_tsm_paths.sh
+---------------------
+A nagios script which checks if all TSM paths are online
+The monitoring machine must have dsmadmc installed
+
+check_tsm_tapes.py
+---------------------
+A nagios script which checks if you are running out of tapes in a TSM storage pool
+The monitoring machine must have dsmadmc installed
+
+cntlm_proxy.sh
+---------------------
+Source to use cntlm as a proxy
+
+generate_readme.sh
+---------------------
+Generates a README file for the repository :-D
+
+grepkill.sh
+---------------------
+Shows a list of processes which match the given pattern and
+then allows you to kill it
+
+lock_unclutter.sh
+---------------------
+Allows using a screen locker with the awesome ,,unclutter'' utility
+
+switch_mon.sh
+---------------------
+The script activates a monitor connected to the VGA port and
+turns off the laptop LCD panel, changing the wallpaper afterwards
+
