@@ -41,6 +41,11 @@ grepkill.sh
 Shows a list of processes which match the given pattern and
 then allows you to kill it
 
+launch.sh
+---------------------
+This is a really handly little script that takes any simple command and runs it in the background. 
+It logs all output into files in ~/.launch in a nice organized manner.
+
 lock_unclutter.sh
 ---------------------
 Allows using a screen locker with the awesome ,,unclutter'' utility
