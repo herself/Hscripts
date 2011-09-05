@@ -36,6 +36,10 @@ generate_readme.sh
 ---------------------
 Generates a README file for the repository :-D
 
+grabber.sh
+---------------------
+Takes a screenshot of a selected area and then displays it - useful for making fast memos, for example for interface configuration before changing it
+
 grepkill.sh
 ---------------------
 Shows a list of processes which match the given pattern and
