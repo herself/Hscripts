@@ -23,11 +23,14 @@ then
 fi
 
 cat $LIST
-echo "Which process to kill? (please give a number, or numbers separated by spaces)"
+echo "Which process to kill? (please give a number, numbers separated by spaces, or a range. example: 1-10 13 14 16-17)"
 read DIEDIE 
-for NUM in $DIEDIE
+DIEDIE=`echo "$DIEDIE" | perl -pe 's/(\d+)-(\d+)/{$1..$2}/g'`
+for NUM in `eval echo "$DIEDIE"`
 do
-	kill `cat $FILE | grep -v "grepkill" | grep $1 | sed -n "${NUM}p" | gawk '{ print $1 }'`
+	DEADPID=`cat $FILE | grep -v "grepkill" | grep $1 | sed -n "${NUM}p" | gawk '{ print $1 }'`
+	kill -9 $DEADPID
+	echo "Killed $DEADPID"
 done
 
 rm $FILE $LIST
