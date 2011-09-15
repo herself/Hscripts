@@ -32,6 +32,10 @@ cntlm_proxy.sh
 ---------------------
 Source to use cntlm as a proxy
 
+eth_status.sh
+---------------------
+Shows the status of a given wired interface. Useful for tools like xmobar or dzen
+
 generate_readme.sh
 ---------------------
 Generates a README file for the repository :-D
