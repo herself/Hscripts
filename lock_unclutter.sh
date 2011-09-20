@@ -7,5 +7,5 @@
 
 killall unclutter
 #the locker
-xlock
+xlock -erasemode no_fade
 unclutter -visible -grab&
