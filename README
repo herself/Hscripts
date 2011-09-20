@@ -28,6 +28,9 @@ check_tsm_tapes.py
 A nagios script which checks if you are running out of tapes in a TSM storage pool
 The monitoring machine must have dsmadmc installed
 
+click.sh
+---------------------
+xdotool mouseup 1
 cntlm_proxy.sh
 ---------------------
 Source to use cntlm as a proxy
@@ -57,6 +60,11 @@ It logs all output into files in ~/.launch in a nice organized manner.
 lock_unclutter.sh
 ---------------------
 Allows using a screen locker with the awesome ,,unclutter'' utility
+
+ntp_http.sh
+---------------------
+A very handy script to synchronize time through http headers when ntp is unavailable.
+Works well through NTLM proxies with cntlm.
 
 scrabble.sh
 ---------------------
