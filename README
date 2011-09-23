@@ -28,9 +28,6 @@ check_tsm_tapes.py
 A nagios script which checks if you are running out of tapes in a TSM storage pool
 The monitoring machine must have dsmadmc installed
 
-click.sh
----------------------
-xdotool mouseup 1
 cntlm_proxy.sh
 ---------------------
 Source to use cntlm as a proxy
@@ -69,6 +66,11 @@ Works well through NTLM proxies with cntlm.
 scrabble.sh
 ---------------------
 Finds the words you can make from the given letters
+
+sshcopyid.sh
+---------------------
+Copy an ssh key to a remote machine when ssh-copy-id is unavailable
+or the service is running on a non-default port.
 
 switch_mon.sh
 ---------------------
