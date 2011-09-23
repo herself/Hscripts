@@ -16,7 +16,7 @@ then
 	killall unclutter
 fi
 
-sleep 0.3s
+perl -e "use Time::HiRes qw( sleep ); sleep (0.3);"
 scrot -s '%Y-%m-%d_$wx$h.png' -e "mv \$f $SCRDIR && feh $SCRDIR/\$f" 
 
 if [[ $UNC_RUNNING -eq 0 ]]
