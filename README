@@ -45,6 +45,11 @@ grepkill.sh
 Shows a list of processes which match the given pattern and
 then allows you to kill it
 
+ishg.c
+---------------------
+Checks if the current directory is a mercurial repository
+Works well (and speeds up considerably) with the "hg status" plugin
+
 launch.sh
 ---------------------
 This is a really handly little script that takes any simple command and runs it in the background. 
