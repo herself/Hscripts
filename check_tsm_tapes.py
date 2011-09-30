@@ -14,7 +14,15 @@ TRESH = 1
 CRIT = 0
 CMD = "dsmadmc -id=cluster01 -password=cluster \"select STGPOOL_NAME,NUMSCRATCHUSED,MAXSCRATCH from stgpools\""
 
-ret = Popen(CMD, stdout=PIPE, shell=True).stdout.readlines()
+prg = Popen(CMD, stdout=PIPE, shell=True)
+prg.wait()
+prg.poll()
+ret = prg.stdout.readlines()
+
+if prg.returncode != 0:
+	print ret
+	exit(2)
+
 trap = re.compile("(.*?) \s+?(\d+)\s+?(\d+)")
 state = 0
 out = []
@@ -36,6 +44,8 @@ if state == 0:
 	print "Tapes OK"
 	exit(0)
 else:
+	if len(out) > 1:
+		print "There are %d tape problems" % (len(out))
 	for line in out:
 		print line
 	exit(state)
