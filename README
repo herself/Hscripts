@@ -77,6 +77,10 @@ switch_mon.sh
 The script activates a monitor connected to the VGA port and
 turns off the laptop LCD panel, changing the wallpaper afterwards
 
+wlan_status.sh
+---------------------
+Shows the status of a given wireless interface. Useful for tools like xmobar or dzen
+
 xrun.sh
 ---------------------
 Opens an xterm window with the program given as an argument. Very nice for binding to a key things like alsamixer or htop, since the second run of the script closes the previously opened window
