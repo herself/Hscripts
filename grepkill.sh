@@ -28,7 +28,7 @@ read DIEDIE
 DIEDIE=`echo "$DIEDIE" | perl -pe 's/(\d+)-(\d+)/{$1..$2}/g'`
 for NUM in `eval echo "$DIEDIE"`
 do
-	DEADPID=`cat $FILE | grep -v "grepkill" | grep $1 | sed -n "${NUM}p" | gawk '{ print $1 }'`
+	DEADPID=`cat $FILE | grep -v "grepkill" | grep $1 | sed -n "${NUM}p" | awk '{ print $1 }'`
 	kill -9 $DEADPID
 	echo "Killed $DEADPID"
 done
