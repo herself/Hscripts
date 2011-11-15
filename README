@@ -63,6 +63,10 @@ lock_unclutter.sh
 ---------------------
 Allows using a screen locker with the awesome ,,unclutter'' utility
 
+monitor_host.sh
+---------------------
+Monitors a host and plays a sound when the given port comes online
+
 ntp_http.sh
 ---------------------
 A very handy script to synchronize time through http headers when ntp is unavailable.

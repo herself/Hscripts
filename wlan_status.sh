@@ -11,7 +11,7 @@ then
 	exit 1
 fi
 
-IP=`iwconfig $1 2> /dev/null | egrep "(ESSID)|(Signal)|(Rate)"|tr -d "\n" | awk '{ printf("%s %s%s %s%s\n", $4, $6, $7, $13, $14)}' | sed 's/ESSID/E/;s/Rate/R/;s/level/L/;s/\/s//;s/"//g;s/=/:/g'`
+IP=`/sbin/iwconfig $1 2> /dev/null | egrep "(ESSID)|(Signal)|(Rate)"|tr -d "\n" | awk '{ printf("%s %s%s %s%s\n", $4, $6, $7, $13, $14)}' | sed 's/ESSID/E/;s/Rate/R/;s/level/L/;s/\/s//;s/"//g;s/=/:/g'`
 DOWN=`ip addr show $1 2> /dev/null | grep "DOWN"`
 CARR=`ip addr show $1 2> /dev/null | grep "NO-CARRIER"`
 
