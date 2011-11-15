@@ -51,7 +51,7 @@ for line in ret:
 
 		if int(cur)+CRIT >= int(max) and all_util > UTIL_TRESH:
 			state = 2
-			out.append("CRITICAL: %s tapes: %s/%s (%d filling, %.1f%% utilzation)" % (name, cur, max, len(num_list), all_util))
+			out.append("CRITICAL: %s tapes: %s/%s (%d filling left, %.1f%% utilzation)" % (name, cur, max, len(num_list), all_util))
 		elif int(cur)+TRESH >= int(max) and all_util > UTIL_TRESH:
 			state = 1
 			out.append("%s tapes: %s/%s (%d filling left, %.1f%% utilzation)" % (name, cur, max, len(num_list), all_util))
