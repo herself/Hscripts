@@ -63,6 +63,11 @@ lock_unclutter.sh
 ---------------------
 Allows using a screen locker with the awesome ,,unclutter'' utility
 
+mercurial_sync.py
+---------------------
+Update you mercurial repos with a single script
+Uses python3 and the locate tool
+
 ntp_http.sh
 ---------------------
 A very handy script to synchronize time through http headers when ntp is unavailable.
