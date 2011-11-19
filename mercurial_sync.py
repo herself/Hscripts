@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Author : Wieslaw Herr (herself@makhleb.net)
 # Check the included LICENSE file for licensing information
 #
@@ -84,8 +84,12 @@ for k, (inb, out) in results.items():
 	else:
 		num_changes = sum([1 for x in out if x.startswith("date: ")])
 		if num_changes > 0:
-			out_result = "{}{} outbound changes{}".format(FAIL, num_changes, ENDC)
-			out_update.append(k)
+			num_heads = sum([1 for x in run_cmd("cd {} && hg heads".format(k)) if x.startswith("date: ")])
+			if num_heads == 1:
+				out_result = "{}{} outbound changes{}".format(FAIL, num_changes, ENDC)
+				out_update.append(k)
+			else:
+				out_result = "{}{} outbound changes (with {} heads, merge needed){}".format(WARNING, num_changes, num_heads, ENDC)
 		else:
 			if len(out) == 1:
 				out_result = "{}auth-error?{}".format(WARNING, ENDC)
@@ -100,8 +104,8 @@ try:
 	else:
 		if in_update != []:
 			print("Perform inbound updates? (y/N)")
-			char = stdin.read(1)
-			if char == "y" or char == "Y":
+			char = stdin.readline()
+			if char[0] == "y" or char[0] == "Y":
 				for repo in in_update:
 					cmd ="cd {} && hg pull -u".format(repo) 
 					print("{}{}{}".format(OKGREEN, cmd, ENDC))
@@ -111,8 +115,8 @@ try:
 				raise KeyboardInterrupt
 		if out_update != []:
 			print("Perform outbound updates? (y/N)")
-			char = stdin.read(1)
-			if char == "y" or char == "Y":
+			char = stdin.readline()
+			if char[0] == "y" or char[0] == "Y":
 				for repo in out_update:
 					cmd ="cd {} && hg push".format(repo) 
 					print("{}{}{}".format(OKGREEN, cmd, ENDC))
