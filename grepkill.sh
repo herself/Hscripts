@@ -6,6 +6,10 @@
 # then allows you to kill it
 ##############
 
+#this was writen before I knew of pkill or plist -fl
+#however, the fact that you can specify ranges
+#makes this tool still useful 
+
 if [[ -z $1 ]] 
 then
 	echo "I need a pattern to look for kind sir!"
