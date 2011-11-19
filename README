@@ -3,31 +3,6 @@ bash.sh
 Displays a random fortune from bash.org.pl 
 Only in polish, sorry!
 
-check_sap_chan.py
----------------------
-A nagios script which checks if all SAP channels are online
-
-check_snmp_switch_san.py
----------------------
-A nagios script which checks the status of sensors and ports on a BROCADE FC switch
-
-Based on a really ugly (yet educational) script by Roderick Derks (roderick@r71.nl)
-
-check_tsm_drive.sh
----------------------
-A nagios script which checks if all TSM drives are online
-The monitoring machine must have dsmadmc installed
-
-check_tsm_paths.sh
----------------------
-A nagios script which checks if all TSM paths are online
-The monitoring machine must have dsmadmc installed
-
-check_tsm_tapes.py
----------------------
-A nagios script which checks if you are running out of tapes in a TSM storage pool
-The monitoring machine must have dsmadmc installed
-
 cntlm_proxy.sh
 ---------------------
 Source to use cntlm as a proxy
@@ -63,14 +38,39 @@ lock_unclutter.sh
 ---------------------
 Allows using a screen locker with the awesome ,,unclutter'' utility
 
-monitor_host.sh
----------------------
-Monitors a host and plays a sound when the given port comes online
-
 mercurial_sync.py
 ---------------------
 Update you mercurial repos with a single script
 Uses python3 and the locate tool
+
+monitor_host.sh
+---------------------
+Monitors a host and plays a sound when the given port comes online
+
+nagios/check_sap_chan.py
+---------------------
+A nagios script which checks if all SAP channels are online
+
+nagios/check_snmp_switch_san.py
+---------------------
+A nagios script which checks the status of sensors and ports on a BROCADE FC switch
+
+Based on a really ugly (yet educational) script by Roderick Derks (roderick@r71.nl)
+
+nagios/check_tsm_drive.sh
+---------------------
+A nagios script which checks if all TSM drives are online
+The monitoring machine must have dsmadmc installed
+
+nagios/check_tsm_paths.sh
+---------------------
+A nagios script which checks if all TSM paths are online
+The monitoring machine must have dsmadmc installed
+
+nagios/check_tsm_tapes.py
+---------------------
+A nagios script which checks if you are running out of tapes in a TSM storage pool
+The monitoring machine must have dsmadmc installed
 
 ntp_http.sh
 ---------------------

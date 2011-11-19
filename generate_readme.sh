@@ -13,15 +13,18 @@ else
 	SED="sed"
 fi
 
-for i in *~LICENSE~README
+for i in **/*~LICENSE~README
 do
-	echo $i
-	echo "---------------------"
-	echo $i | egrep -q "\.c$"
-	if [[ $? -eq 0 ]]
+	if [[ -f $i ]]
 	then
-		cat $i | $SED -n '4,/\/\/ -------------/{s/\/\/ //g;s/\/\///g;s/---//g;p}' | grep -v "XXX"
-	else
-		cat $i | $SED -n '5,/##############/{s/# //g;s/#//g;p}' | grep -v "XXX"
+		echo $i
+		echo "---------------------"
+		echo $i | egrep -q "\.c$"
+		if [[ $? -eq 0 ]]
+		then
+			cat $i | $SED -n '4,/\/\/ -------------/{s/\/\/ //g;s/\/\///g;s/---//g;p}' | grep -v "XXX"
+		else
+			cat $i | $SED -n '5,/##############/{s/# //g;s/#//g;p}' | grep -v "XXX"
+		fi
 	fi
 done
