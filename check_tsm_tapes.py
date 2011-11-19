@@ -4,6 +4,7 @@
 #
 # A nagios script which checks if you are running out of tapes in a TSM storage pool
 # The monitoring machine must have dsmadmc installed
+# XXX: Needs optimalization, badly
 ##############
 
 from subprocess import Popen, PIPE
