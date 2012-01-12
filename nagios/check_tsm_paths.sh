@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Author : Wiesław Herr (herself@makhleb.net)
+# Check the included LICENSE file for licensing information
+#
+# A nagios script which checks if all TSM paths are online
+# The monitoring machine must have dsmadmc installed
+##############
+
 ID="cluster01"
 PASS="cluster"
 
@@ -18,4 +25,3 @@ else
 	fi
 	exit 2
 fi
-
