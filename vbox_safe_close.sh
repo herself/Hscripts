@@ -8,7 +8,7 @@
 ##############
 
 VM=$(VBoxManage list runningvms)
-if [[ `echo "$VM" | wc -l` -eq 0 ]]
+if [[ -z $VM ]]
 then
 	echo "No running VMs detected"
 	exit
