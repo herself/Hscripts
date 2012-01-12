@@ -91,6 +91,12 @@ switch_mon.sh
 The script activates a monitor connected to the VGA port and
 turns off the laptop LCD panel, changing the wallpaper afterwards
 
+vbox_safe_close.sh
+---------------------
+Saves the state of all running Virtualbox machines
+I always forget to do that when I halt the system, so aliased halt for
+vbox_safe_close.sh; halt
+
 wlan_status.sh
 ---------------------
 Shows the status of a given wireless interface. Useful for tools like xmobar or dzen
