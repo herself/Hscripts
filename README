@@ -84,6 +84,10 @@ ntp_http.sh
 A very handy script to synchronize time through http headers when ntp is unavailable.
 Works well through NTLM proxies with cntlm.
 
+rescan_scsi.sh
+---------------------
+Forces a rescan of SCSI devices, ie. FC driven disks
+
 scrabble.sh
 ---------------------
 Finds the words you can make from the given letters
