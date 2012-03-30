@@ -102,6 +102,10 @@ switch_mon.sh
 The script activates a monitor connected to the VGA port and
 turns off the laptop LCD panel, changing the wallpaper afterwards
 
+timeless.sh
+---------------------
+Shows all given files in a given directory by modification time. Useful for folders with a ton of logs in them
+
 vbox_safe_close.sh
 ---------------------
 Saves the state of all running Virtualbox machines
