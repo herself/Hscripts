@@ -38,8 +38,6 @@ lock_unclutter.sh
 ---------------------
 Allows using a screen locker with the awesome ,,unclutter'' utility
 
-lol
----------------------
 md5dir.sh
 ---------------------
 Produces a md5 checksum on a given directory. Very handy to check
